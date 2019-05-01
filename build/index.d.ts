@@ -15,10 +15,10 @@ export interface IServiceConfig {
     environment?: string;
     [k: string]: any;
 }
-export default class ServiceRunner {
+export default class Test {
     rpc: jayson.Client;
+    methods: any[];
     private validator;
-    private openrpcDocument;
     constructor(options: any);
     /**
      *
@@ -36,5 +36,6 @@ export default class ServiceRunner {
      *
      */
     startService(): Promise<IServiceConfig>;
+    private validate;
     private request;
 }
