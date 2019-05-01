@@ -15,7 +15,7 @@ export interface IServiceConfig {
     environment?: string;
     [k: string]: any;
 }
-export default class Test {
+export default class ServiceRunner {
     rpc: jayson.Client;
     methods: any[];
     private validator;

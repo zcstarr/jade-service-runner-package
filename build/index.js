@@ -22,7 +22,7 @@ class ParameterValidationError extends Error {
         this.errors = errors;
     }
 }
-class Test {
+class ServiceRunner {
     constructor(options) {
         this.methods = [
             {
@@ -225,5 +225,5 @@ class Test {
         return result.then((r) => r.result);
     }
 }
-exports.default = Test;
+exports.default = ServiceRunner;
 //# sourceMappingURL=index.js.map
