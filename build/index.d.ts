@@ -1,4 +1,3 @@
-import * as jayson from "jayson/promise";
 export declare type TServiceName = string;
 export declare type TVersion = string;
 export declare type TInstallSuccess = boolean;
@@ -16,9 +15,9 @@ export interface IServiceConfig {
     [k: string]: any;
 }
 export default class ServiceRunner {
-    rpc: jayson.Client;
-    methods: any[];
+    rpc: any;
     private validator;
+    private openrpcDocument;
     constructor(options: any);
     /**
      *
@@ -36,6 +35,5 @@ export default class ServiceRunner {
      *
      */
     startService(): Promise<IServiceConfig>;
-    private validate;
     private request;
 }
