@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // @ts-ignore
 const browser_1 = __importDefault(require("jayson/lib/client/browser"));
 const lodash_1 = __importDefault(require("lodash"));
-const schema_utils_js_1 = require("@open-rpc/schema-utils-js");
+// import { MethodCallValidator } from "@open-rpc/schema-utils-js";
 // @ts-ignore
 const callServer = (request, callback) => {
     const options = {
@@ -29,7 +29,7 @@ class ServiceRunner {
             throw new Error("Invalid constructor params");
         }
         this.rpc = browser_1.default(callServer, options.transport);
-        this.validator = new schema_utils_js_1.MethodCallValidator(this.openrpcDocument);
+        // this.validator = new MethodCallValidator(this.openrpcDocument);
     }
     /**
      *

@@ -16,7 +16,6 @@ export interface IServiceConfig {
 }
 export default class ServiceRunner {
     rpc: any;
-    private validator;
     private openrpcDocument;
     constructor(options: any);
     /**
