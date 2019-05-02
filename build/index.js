@@ -57,10 +57,10 @@ class ServiceRunner {
     }
     request(methodName, params) {
         const methodObject = lodash_1.default.find(this.openrpcDocument.methods, ({ name }) => name === methodName);
-        const openRpcMethodValidationErrors = this.validator.validate(methodName, params);
+        /*const openRpcMethodValidationErrors = this.validator.validate(methodName, params);
         if (openRpcMethodValidationErrors.length > 0) {
-            return Promise.reject(openRpcMethodValidationErrors);
-        }
+          return Promise.reject(openRpcMethodValidationErrors);
+          }*/
         let rpcParams;
         if (methodObject.paramStructure && methodObject.paramStructure === "by-name") {
             rpcParams = lodash_1.default.zipObject(params, lodash_1.default.map(methodObject.params, "name"));
