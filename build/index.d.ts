@@ -1,3 +1,4 @@
+import * as jayson from "jayson/promise";
 export declare type TServiceName = string;
 export declare type TVersion = string;
 export declare type TInstallSuccess = boolean;
@@ -6,6 +7,8 @@ export declare type TRunningServices = Array<{
     type?: Array<string | string | string>;
     [k: string]: any;
 }>;
+export declare type TName = string;
+export declare type TEnvironment = string;
 export interface IServiceConfig {
     type?: Array<string | string | string>;
     host?: string;
@@ -14,8 +17,9 @@ export interface IServiceConfig {
     environment?: string;
     [k: string]: any;
 }
-export default class ServiceRunner {
-    rpc: any;
+export default class Something {
+    rpc: jayson.Client;
+    private validator;
     private openrpcDocument;
     constructor(options: any);
     /**
@@ -33,6 +37,6 @@ export default class ServiceRunner {
     /**
      *
      */
-    startService(): Promise<IServiceConfig>;
+    startService(name: TName, version: TVersion, environment: TEnvironment): Promise<IServiceConfig>;
     private request;
 }
