@@ -1,5 +1,5 @@
 {
-  "name": "jade-service-runner",
+  "name": "jade-service-runner-package",
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
